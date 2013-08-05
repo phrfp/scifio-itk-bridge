@@ -34,7 +34,7 @@
  * #L%
  */
 
-package loci.scifio.itk;
+package io.scif.itk;
 
 import java.awt.image.ColorModel;
 import java.awt.image.IndexColorModel;
@@ -62,14 +62,11 @@ import loci.formats.MetadataTools;
 import loci.formats.gui.Index16ColorModel;
 import loci.formats.meta.IMetadata;
 import loci.formats.meta.MetadataStore;
+
 /**
- * SCIFIOITKBridge is a Java console application that listens for "commands"
- * on stdin and issues results on stdout. It is used by the pipes version of
- * the ITK Bio-Formats plugin to read image files.
- *
- * <dl><dt><b>Source code:</b></dt>
- * <dl><dd>
- * <a href="http://github.com/uw-loci/scifio-itk-bridge/blob/master/src/main/java/loci/scifio/itk/SCIFIOITKBridge.java">Gitweb</a></dd></dl>
+ * The SCIFIO ITK Bridge is a Java console application that listens for
+ * "commands" on stdin and issues results on stdout. It is used by the pipes
+ * version of the ITK Bio-Formats plugin to read image files.
  *
  * @author Mark Hiner
  * @author Curtis Rueden
