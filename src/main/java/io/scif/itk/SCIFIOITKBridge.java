@@ -7,13 +7,13 @@
  * %%
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
- * 
+ *
  * 1. Redistributions of source code must retain the above copyright notice,
  *    this list of conditions and the following disclaimer.
  * 2. Redistributions in binary form must reproduce the above copyright notice,
  *    this list of conditions and the following disclaimer in the documentation
  *    and/or other materials provided with the distribution.
- * 
+ *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
@@ -304,13 +304,13 @@ public class SCIFIOITKBridge {
 		// Note: ITK X,Y,Z spacing is mm. Bio-Formats uses um.
 		sendData("PixelsPhysicalSizeX", String.valueOf(((meta
 			.getPixelsPhysicalSizeX(0) == null ? 1.0 : meta.getPixelsPhysicalSizeX(0)
-			.getValue()) / 1000f)));
+			.value()) )));
 		sendData("PixelsPhysicalSizeY", String.valueOf(((meta
 			.getPixelsPhysicalSizeY(0) == null ? 1.0 : meta.getPixelsPhysicalSizeY(0)
-			.getValue()) / 1000f)));
+			.value()) )));
 		sendData("PixelsPhysicalSizeZ", String.valueOf(((meta
 			.getPixelsPhysicalSizeZ(0) == null ? 1.0 : meta.getPixelsPhysicalSizeZ(0)
-			.getValue()) / 1000f)));
+			.value()) )));
 		sendData("PixelsPhysicalSizeT", String
 			.valueOf((meta.getPixelsTimeIncrement(0) == null ? 1.0 : meta
 				.getPixelsTimeIncrement(0))));
@@ -503,7 +503,7 @@ public class SCIFIOITKBridge {
 
 	/**
 	 * Writes data to the given fileName.
-	 * 
+	 *
 	 * @param fileName
 	 * @param cm
 	 * @param byteOrder
@@ -688,7 +688,7 @@ public class SCIFIOITKBridge {
 	/**
 	 * Cleans up, closing any active reader and writer streams, then terminates
 	 * the JVM using {@link System#exit(int)} with the given exit code.
-	 * 
+	 *
 	 * @param val The exit code to use when quitting the Java process.
 	 * @throws FormatException Never thrown.
 	 * @throws IOException If something goes wrong closing the streams.
